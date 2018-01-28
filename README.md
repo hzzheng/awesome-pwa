@@ -32,10 +32,11 @@
 1. https://jakearchibald.com/
 2. https://serviceworke.rs/
 3. https://developers.google.com/web/progressive-web-apps/
+4. https://w3c.github.io/ServiceWorker/
 
 
 
-###  书籍
+### 书籍
 
 1. http://sangka-z.com/PWA-Book-CN/
 
@@ -60,11 +61,13 @@
 2. [Push Companion](https://web-push-codelab.glitch.me/)
 3. [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 4. [Manifoldjs](http://manifoldjs.com/generator)
+5. [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin)
+6. [Web App Manifest Generator](https://app-manifest.firebaseapp.com/)
 
 
-### Demo
+### Samples
 
-1. https://arcane-garden-92807.herokuapp.com/
+1. https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker
 2. https://web-push-book.gauntface.com/demos/notification-examples/
 
 
