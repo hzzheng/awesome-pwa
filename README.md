@@ -52,7 +52,6 @@
 
 5. [Progressive Web App Summit 2016](https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb)
 
-   ​
 
 ### 工具
 
@@ -60,7 +59,6 @@
 2. [Push Companion](https://web-push-codelab.glitch.me/)
 3. [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 4. [Manifoldjs](http://manifoldjs.com/generator)
-
 
 
 ### Demo
