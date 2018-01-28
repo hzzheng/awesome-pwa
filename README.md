@@ -17,6 +17,7 @@
 5. [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications/)
 6. [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/)
 7. [饿了么的 PWA 升级实践](https://zhuanlan.zhihu.com/p/27853228)
+8. [PWA 在饿了么的实践经验](https://zhuanlan.zhihu.com/p/25800461)
 
 
 
