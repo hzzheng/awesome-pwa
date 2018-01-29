@@ -57,6 +57,8 @@
 
 6. [PWA 带来极速离线Web](https://tianchi.aliyun.com/forum/videoStream.html#postsId=3615)
 
+7. [offline-web-applications](https://www.udacity.com/course/offline-web-applications--ud899)
+
 
 ### 工具
 
