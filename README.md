@@ -55,6 +55,8 @@
 
 5. [Progressive Web App Summit 2016](https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb)
 
+6. [PWA 带来极速离线Web](https://tianchi.aliyun.com/forum/videoStream.html#postsId=3615)
+
 
 ### 工具
 
