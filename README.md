@@ -61,6 +61,8 @@
 
 8. [Production Progressive Web Apps With JavaScript Frameworks (Google I/O '17)](https://www.youtube.com/watch?v=aCMbSyngXB4)
 
+9. [Instant Loading: Building offline-first Progressive Web Apps - Google I/O 2016](https://www.youtube.com/watch?v=cmGr0RszHc8&list=WL&index=7&t=3s)
+
 
 ### 工具
 
