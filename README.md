@@ -18,7 +18,7 @@
 6. [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/)
 7. [饿了么的 PWA 升级实践](https://zhuanlan.zhihu.com/p/27853228)
 8. [PWA 在饿了么的实践经验](https://zhuanlan.zhihu.com/p/25800461)
-9. [Caching best practices & max-age gotchas](https://jira.zhonganonline.com/browse/ONLINEOPRA-835)
+9. [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 
 
 
@@ -58,6 +58,8 @@
 6. [PWA 带来极速离线Web](https://tianchi.aliyun.com/forum/videoStream.html#postsId=3615)
 
 7. [offline-web-applications](https://www.udacity.com/course/offline-web-applications--ud899)
+
+8. [Production Progressive Web Apps With JavaScript Frameworks (Google I/O '17)](https://www.youtube.com/watch?v=aCMbSyngXB4)
 
 
 ### 工具
