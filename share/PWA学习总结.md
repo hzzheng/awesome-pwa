@@ -22,6 +22,15 @@ transition: slide
 2. CacheStorage
 
 [slide]
+<video src="/video/2.mp4" controls >
+
+[slide]
+<img src="/imgs/16.jpeg" />
+
+[slide]
+<img src="/imgs/17.jpeg" />
+
+[slide]
 
 # PWA是什么
 
@@ -276,7 +285,7 @@ self.addEventListener('fetch', function(event) {
 2. Cache only
 3. Network only
 4. Network with cache fallback
-5. Cache, then nextwork
+5. Cache, then network
 
 [slide]
 ---
@@ -311,7 +320,49 @@ self.addEventListener('fetch', function(event) {
 [DEMO](https://www.youtube.com/watch?v=l4e_LFozK2k&feature=youtu.be)
 
 [slide]
-# 举个例子
----
-比方说有一个blog平台，在没有网络的情况下用户可以离线编辑文章，保存并且发布。等到了有网络的地方，后台可以自动发布文章。
+```javascript
+if ('serviceWorker' in navigator && 'SyncManager' in window) {
+  navigator.serviceWorker
+    .register('./service-worker.js')
+    .then(registration => navigator.serviceWorker.ready)
+    .then(registration => { // register sync
+      document.getElementById('requestButton').addEventListener('click', () => {
+        registration.sync.register('image-fetch').then(() => {
+            console.log('Sync registered');
+        });
+      });
+    });
+} else {
+  document.getElementById('requestButton').addEventListener('click', () => {
+    console.log('Fallback to fetch the image as usual');
+  });
+}
+```
+
+[slide]
+```javascript
+self.addEventListener('sync', function(event) {
+  if (event.tag == 'image-fetch') {
+    event.waitUntil(fetchDogImage());
+  }
+});
+```
+```javascript
+function fetchDogImage () {
+    fetch('./doge.png')
+      .then(function (response) {
+        return response;
+      })
+      .then(function (text) {
+        console.log('Request successful', text);
+      })
+      .catch(function (error) {
+        console.log('Request failed', error);
+      });
+  }
+```
+
+[slide]
+# 谢谢
+
 
