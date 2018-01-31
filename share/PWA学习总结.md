@@ -90,7 +90,20 @@ transition: slide
 <img src="/imgs/6.jpg" />
 
 [slide]
-# Application Manifest
+---
+## Application Manifest
+---
+## ServiceWorker & Cache
+---
+## Web Push & Notification
+---
+## Background Sync
+---
+
+[slide]
+---
+## Application Manifest
+---
 1. 它是一个JSON文件，一般命名为Manifest.json，包含了一些配置信息 {:&.bounceIn}
 2. 触发浏览器弹一个对话框问你是否添加应用到手机主屏
 3. 对添加到手机主屏的Web App做一些外观设置
@@ -137,7 +150,8 @@ transition: slide
 <img src="/imgs/9.jpeg" />
 
 [slide]
-# ServiceWorker
+---
+## ServiceWorker & Cache
 ---
 1. 它是一种特殊的Web Worker，在这个Worker里可以监听一些特殊的事件，比如"fetch", "push", "sync"等 {:&.bounceIn}
 2. 它在后台运行，不会影响页面主线程，并且即便页面关闭也会存在
@@ -256,8 +270,40 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 [slide]
+# 缓存策略
+---
 1. Cache with network fallback {:&.bounceIn}
 2. Cache only
 3. Network only
 4. Network with cache fallback
 5. Cache, then nextwork
+
+[slide]
+---
+## Web Push & Notification
+---
+[slide]
+<img src="/imgs/12.png">
+[slide]
+1. Push API {:&.bounceIn}
+2. Notification API
+
+[slide]
+# Step 1
+<img src="/imgs/13.jpeg" />
+
+[slide]
+# Step 2
+<img src="/imgs/14.jpeg" />
+
+[slide]
+# Step 3
+<img src="/imgs/15.jpeg" />
+
+
+[slide]
+---
+## Background Sync
+---
+* 暂时只有Chrome 49+支持 {:&.bounceIn}
+
