@@ -307,3 +307,11 @@ self.addEventListener('fetch', function(event) {
 ---
 * 暂时只有Chrome 49+支持 {:&.bounceIn}
 
+[slide]
+[DEMO](https://www.youtube.com/watch?v=l4e_LFozK2k&feature=youtu.be)
+
+[slide]
+# 举个例子
+---
+比方说有一个blog平台，在没有网络的情况下用户可以离线编辑文章，保存并且发布。等到了有网络的地方，后台可以自动发布文章。
+
