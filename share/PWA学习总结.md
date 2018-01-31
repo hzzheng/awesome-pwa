@@ -146,3 +146,118 @@ transition: slide
 [slide]
 # 可以监听哪些事件
 <img src="/imgs/10.jpg" />
+
+[slide]
+# ServiceWorker生命周期
+<img src="/imgs/11.jpeg" />
+
+[slide]
+```javascript
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+```
+[slide]
+```javascript
+var CACHE_NAME = 'my-site-cache-v1';
+var urlsToCache = [
+  '/',
+  '/styles/main.css',
+  '/script/main.js'
+];
+
+self.addEventListener('install', function(event) {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+```
+
+[slide]
+```javascript
+self.addEventListener('activate', function(event) {
+
+  var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+```
+
+[slide]
+```javascript
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+```
+
+[slide]
+```javascript
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        // IMPORTANT: Clone the request. A request is a stream and
+        // can only be consumed once. Since we are consuming this
+        // once by cache and once by the browser for fetch, we need
+        // to clone the response.
+        var fetchRequest = event.request.clone();
+
+        return fetch(fetchRequest).then(
+          function(response) {
+            var responseToCache = response.clone();
+
+            caches.open(CACHE_NAME)
+              .then(function(cache) {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          }
+        );
+      })
+    );
+});
+```
+[slide]
+1. Cache with network fallback {:&.bounceIn}
+2. Cache only
+3. Network only
+4. Network with cache fallback
+5. Cache, then nextwork
