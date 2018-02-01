@@ -18,7 +18,7 @@ transition: slide
 
 # 先看[DEMO](https://arcane-garden-92807.herokuapp.com/)
 ---
-1. ServiceWork
+1. ServiceWorker
 2. CacheStorage
 
 [slide]
